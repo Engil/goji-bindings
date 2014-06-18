@@ -40,7 +40,7 @@ let _ =
     match Dom.get_element_by_id document "body" with
     | None -> assert false
     | Some elt -> elt in
-  let canvas = Dom.create_element_mode "div" in
+  let canvas = Dom.create_element_node "div" in
   Dom.append_child (Dom.element_as_node body) canvas;
   let paper = raphael_at_node canvas 500 500 in
   Paper.set_start paper ;
